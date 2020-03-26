@@ -1,38 +1,260 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap');
+
+body {
+  font-family: 'Darker Grotesque', sans-serif;
+}
+
+a.logo {
+  font-size: 30px;
+  color: #000;
+  font-weight: 800;
+}
+
+.mainmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mainmenu li {
+  display: inline-block;
+}
+
+.mainmenu li a {
+  display: block;
+  color: #000;
+  text-transform: uppercase;
+  padding: 12px;
+  position: relative;
+}
+
+body {
+  font-size: 18px;
+}
+
+.mainmenu li a:hover:after {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  height: 2px;
+  background: #000;
+  content: "";
+  width: 30px;
+  margin-left: -15px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input[type=text] {
+  border: 1px solid #ddd;
+  padding: 5px 20px;
+}
+
+input[type=submit] {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 6px 25px;
+}
+
+header.header {
+  padding: 20px 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.content-block {
+  padding: 50px 0;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+.single-photo-item h5 {
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.single-photo-item a {
+  color: #333;
+}
+
+p.cat-name {
+  opacity: .5;
+  font-size: 90%;
+}
+
+.footer-menu a {
+  color: #333;
+  text-transform: uppercase;
+  padding: 15px;
+  display: inline-block;
+}
+
+.footer-menu li {
+  display: inline-block;
+}
+
+.footer-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-menu {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.copyright-text {
+  margin-bottom: 30px;
+}
+
+.photo-wrapper {
+  height: 190px;
+  margin-bottom: 15px;
+}
+
+.photo-wrapper img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.single-photo-item {
+  margin-bottom: 40px;
+}
+.top-heading {margin-bottom: 40px}
+
+.photo-img-n {
+  height: 800px;
+  background-color: #ddd
+}
+
+.photo-img-n img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.photo-single-wrapper {
+  position: relative;
+  margin-top: 30px;
+}
+
+.photo-single-info {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  background: #fff;
+  padding: 30px;
+  font-size: 20px;
+}
+
+.photo-single-info ul {
+  font-size: 85%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.photo-single-info li {
+  border-bottom: 1px solid #ddd;
+}
+
+.photo-single-info a img {
+  max-width: 20px;
+  display: inline-block;
+  float: right;
+  position: absolute;
+  right: 10px;
+  top: 3px;
+}
+
+.photo-single-info a {
+  position: relative;
+  color: #333;
+  background: none;
+  border: 1px solid #333;
+  text-align: left;
+  padding: 5px 20px;
+  padding-right: 45px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.single-photo-item {
+  position: relative;
+}
+
+a.dl-icon {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  height: 30px;
+  width: 30px;
+  background: #fff;
   text-align: center;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+a.dl-icon:hover {background-color: #ddd}
+a.dl-icon img {
+  max-width: 16px;
+  display: inline-block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.single-photo-item:hover a.dl-icon {
+  opacity: 1;
+  visibility: visible;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@media only screen and (max-width: 991px) { 
+  header.header .col {
+    min-width: 100%;
+    text-align: center;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  header.header .text-right {
+    text-align: center !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .content-block {
+    padding: 20px 0;
+  }
+
+  .row.top-heading {
+    text-align: center;
+  }
+
+  .row.top-heading .col-auto {
+    min-width: 100%;
+  }
+
+  .photo-wrapper {
+    height: 250px;
+  }
+
+  .footer-menu {
+    font-size: 80%;
+    margin-bottom: 40px;
+  }
+
+  .footer-menu a {
+    padding: 10px;
   }
 }
